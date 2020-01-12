@@ -1,0 +1,96 @@
+.root {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  counter-reset: section;
+  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
+  width: min-content;
+  color: #bbbbbb;
+}
+
+.root > div {
+  min-height: 1.125rem;
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+.root > div::before {
+  counter-increment: section; /* Increment the value of section counter by 1 */
+  content: counter(section);
+  text-align: right;
+  display: inline-block;
+  width: 4rem;
+  padding-right: 1rem;
+  color: #858585;
+}
+
+.root > div:nth-child(odd) {
+  background-color: hsl(192, 100%, 10%);
+}
+
+.root > div:nth-child(even) {
+  background-color: hsl(192, 100%, 11%);
+}
+
+.verbose {
+  color: hsl(300, 70%, 50%);
+}
+
+.debug {
+  color: hsl(75, 70%, 50%);
+}
+
+.trace {
+  color: hsl(130, 70%, 50%);
+}
+
+.info {
+  color: hsl(150, 70%, 50%); /* hsl(205, 70%, 50%);*/
+}
+
+.warn {
+  color: hsl(50, 70%, 50%);
+}
+
+.error,
+.exception {
+  color: hsl(0, 80%, 60%);
+}
+
+.exception.strong {
+  color: hsl(0, 100%, 60%);
+}
+
+.date {
+  color: hsl(200, 70%, 50%);
+}
+
+.date span {
+  color: inherit;
+}
+
+.string {
+  color: hsl(210, 70%, 50%);
+}
+
+.literal {
+  color: hsl(80, 70%, 50%);
+}
+
+.url {
+  color: hsl(220, 70%, 50%);
+  text-decoration: underline;
+}
+
+.git-commit {
+  color: hsl(190, 70%, 50%);
+}
+
+.guid {
+  color: hsl(310, 70%, 50%);
+}
+
+.git-commit span,
+.string span,
+.guid span {
+  color: inherit;
+}
